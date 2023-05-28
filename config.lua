@@ -13,21 +13,151 @@ Config.defaultlang = "en_lang"
 -- open stores
 Config.Key = 0x760A9C6F --[G]
 
+
+Config.PriceMultiplier = 0.11
+Config.StoreType = "generalstore" -- flag field in your items database, change with caution
+
+--Webhook Section, description is in translation
+Config.UseWebhook = true -- Use webhook
+
+--Mandatory Webhook Parts
+Config.WebhookTitle = "General Store Transactions"
+Config.Webhook = "https://discord.com/api/webhooks/1110061327612903445/Omw1z6dFZiBPu3RKO_EzIOQsvX4SP0oaaFbFK3pFRi0bxZ7c10CzEOXj7AFj5Soa0bSq"
+
+
+--Optional Webhook Parts, if not filled will default vorp_core config
+Config.WebhookColor = ""
+Config.WebhookName = ""
+Config.WebhookLogo = ""
+Config.WebhookLogo2 = ""
+Config.WebhookAvatar = ""
+
+
 --- STORES ---
 Config.Stores = {     
-    --------------------------------------Armadillo------------------------------   
-    --------------------------------------Blackwater-----------------------------    
+--------------------------------------Armadillo------------------------------ 
+    ArmadilloGeneralStore = {
+        blipAllowed = true,
+        BlipName = "General Store",
+        storeName = "Armadillo General Store",
+        PromptName = "General Store",
+        sprite = 1475879922,
+        x = -3687.34, y = -2623.53, z = -13.43, h = -85.32,
+        distanceOpenStore = 3.0,
+        NpcAllowed = true,
+        NpcModel = "U_M_M_NbxGeneralStoreOwner_01",
+        AllowedJobs = {}, -- jobs allowed
+        JobGrade = 0,
+        category = { "Survival", "Food", "Drinks", "Items", "Dog", "Pig" }, -- you need to add the same words to the buyitems and buyitems category you can add new categories as long the items have the category names
+        storeType = { "Buy","Sell"  }, -- choose the storetype if you translate this you must do the same in the client.lua file
+        StoreHoursAllowed = false, -- if you want the stores to use opening and closed hours
+        RandomPrices = false,
+        StoreOpen = 7, -- am
+        StoreClose = 21 -- pm
+    },
+    --------------------------------------Blackwater-----------------------------
+    BlackwaterGeneralStore = {
+        blipAllowed = true,
+        BlipName = "General Store",
+        storeName = "Blackwater General Store",
+        PromptName = "General Store",
+        sprite = 1475879922,
+        x = -785.43, y = -1321.84, z = 43.88, h= 179.2,
+        distanceOpenStore = 3.0,
+        NpcAllowed = true,
+        NpcModel = "U_M_M_NbxGeneralStoreOwner_01",
+        AllowedJobs = {}, -- jobs allowed
+        JobGrade = 0,
+        category = { "Survival", "Food", "Drinks", "Items", "Dog", "Pig" }, -- you need to add the same words to the buyitems and buyitems category you can add new categories as long the items have the category names
+        storeType = { "Buy","Sell"  }, -- choose the storetype if you translate this you must do the same in the client.lua file
+        StoreHoursAllowed = false, -- if you want the stores to use opening and closed hours
+        RandomPrices = false,
+        StoreOpen = 7, -- am
+        StoreClose = 21 -- pm
+    },
     --------------------------------------Rhodes---------------------------------        
-    -----------------------------------------------------------------------------
+    RhodesGeneralStore = {
+        blipAllowed = true,
+        BlipName = "General Store",
+        storeName = "Rhodes General Store",
+        PromptName = "General Store",
+        sprite = 1475879922,
+        x = 1329.68, y = -1294.46, z = 77.02, h= 71.19,
+        distanceOpenStore = 3.0,
+        NpcAllowed = true,
+        NpcModel = "U_F_M_TumGeneralStoreOwner_01",
+        AllowedJobs = {}, -- jobs allowed
+        JobGrade = 0,
+        category = { "Survival", "Food", "Drinks", "Items", "Dog", "Pig" }, -- you need to add the same words to the buyitems and buyitems category you can add new categories as long the items have the category names
+        storeType = { "Buy","Sell"  }, -- choose the storetype if you translate this you must do the same in the client.lua file
+        StoreHoursAllowed = false, -- if you want the stores to use opening and closed hours
+        RandomPrices = false,
+        StoreOpen = 7, -- am
+        StoreClose = 21 -- pm
+    },-----------------------------------------------------------------------------
     --------------------------------------St-Denis-------------------------------
     -----------------------------------------------------------------------------
-    -----------------------------------------------------------------------------
+    StDenisGeneralStore = {
+        blipAllowed = true,
+        BlipName = "General Store",
+        storeName = "St-Denis General Store",
+        PromptName = "General Store",
+        sprite = 1475879922,
+        x = 2824.65, y = -1319.54, z = 46.76, h= 315.21,
+        distanceOpenStore = 3.0,
+        NpcAllowed = true,
+        NpcModel = "U_F_M_TumGeneralStoreOwner_01",
+        AllowedJobs = {}, -- jobs allowed
+        JobGrade = 0,
+        category = { "Survival", "Food", "Drinks", "Items", "Dog", "Pig" }, -- you need to add the same words to the buyitems and buyitems category you can add new categories as long the items have the category names
+        storeType = { "Buy","Sell"  }, -- choose the storetype if you translate this you must do the same in the client.lua file
+        StoreHoursAllowed = false, -- if you want the stores to use opening and closed hours
+        RandomPrices = false,
+        StoreOpen = 7, -- am
+        StoreClose = 21 -- pm
+    },-----------------------------------------------------------------------------
     --------------------------------------Strawberry-----------------------------
     -----------------------------------------------------------------------------
-    -----------------------------------------------------------------------------
+    StrawbGeneralStore = {
+        blipAllowed = true,
+        BlipName = "General Store",
+        storeName = "Strawberry General Store",
+        PromptName = "General Store",
+        sprite = 1475879922,
+        x = -1789.73, y = -387.87, z = 160.33, h= 57.81,
+        distanceOpenStore = 3.0,
+        NpcAllowed = true,
+        NpcModel = "U_F_M_TumGeneralStoreOwner_01",
+        AllowedJobs = {}, -- jobs allowed
+        JobGrade = 0,
+        category = { "Survival", "Food", "Drinks", "Items", "Dog", "Pig" }, -- you need to add the same words to the buyitems and buyitems category you can add new categories as long the items have the category names
+        storeType = { "Buy","Sell"  }, -- choose the storetype if you translate this you must do the same in the client.lua file
+        StoreHoursAllowed = false, -- if you want the stores to use opening and closed hours
+        RandomPrices = false,
+        StoreOpen = 7, -- am
+        StoreClose = 21 -- pm
+    },-----------------------------------------------------------------------------
     --------------------------------------Tumbleweed-----------------------------
     -----------------------------------------------------------------------------
-    -----------------------------------------------------------------------------
+    TumbleGeneralStore = {
+        blipAllowed = true,
+        BlipName = "General Store",
+        storeName = "Tumbleweed General Store",
+        PromptName = "General Store",
+        sprite = 1475879922,
+        x = -5486.02, y = -2937.93, z = -0.4, h = 145.24,
+        distanceOpenStore = 3.0,
+        NpcAllowed = true,
+        NpcModel = "U_F_M_TumGeneralStoreOwner_01",
+        AllowedJobs = {}, -- jobs allowed
+        JobGrade = 0,
+        category = { "Survival", "Food", "Drinks", "Items", "Dog", "Pig" }, -- you need to add the same words to the buyitems and buyitems category you can add new categories as long the items have the category names
+        storeType = { "Buy","Sell"  }, -- choose the storetype if you translate this you must do the same in the client.lua file
+        StoreHoursAllowed = false, -- if you want the stores to use opening and closed hours
+        RandomPrices = false,
+        StoreOpen = 7, -- am
+        StoreClose = 21 -- pm
+    },-----------------------------------------------------------------------------
     --------------------------------------Valentine------------------------------
     -----------------------------------------------------------------------------
     ValGeneralStore = {
@@ -48,11 +178,28 @@ Config.Stores = {
         RandomPrices = false,
         StoreOpen = 7, -- am
         StoreClose = 21 -- pm
-    },
-    -----------------------------------------------------------------------------
+    },-----------------------------------------------------------------------------
     --------------------------------------Vanhorn--------------------------------
     -----------------------------------------------------------------------------
-     
+    VanGeneralStore = {
+        blipAllowed = true,
+        BlipName = "General Store",
+        storeName = "Vanhorn General Store",
+        PromptName = "General Store",
+        sprite = 1475879922,
+        x = 3025.54, y = 561.99, z = 44.72, h = 223.44,
+        distanceOpenStore = 3.0,
+        NpcAllowed = true,
+        NpcModel = "U_F_M_TumGeneralStoreOwner_01",
+        AllowedJobs = {}, -- jobs allowed
+        JobGrade = 0,
+        category = { "Survival", "Food", "Drinks", "Items", "Dog", "Pig" }, -- you need to add the same words to the buyitems and buyitems category you can add new categories as long the items have the category names
+        storeType = { "Buy","Sell"  }, -- choose the storetype if you translate this you must do the same in the client.lua file
+        StoreHoursAllowed = false, -- if you want the stores to use opening and closed hours
+        RandomPrices = false,
+        StoreOpen = 7, -- am
+        StoreClose = 21 -- pm
+    },
 }
 
 
@@ -64,21 +211,9 @@ Config.Stores = {
 -- desc = a description of the item
 -- category = where the item will be displayed at
 
-SELL_ITEMS_GENERALSTORE = {
-                -- Survival
-                { itemLabel = "Campfire", itemName = "campfire", currencyType = "cash", sellprice = 5, randomprice = math.random(30, 55), desc = "Sell a Campfire", category = "Survival" },
-                { itemLabel = "Tent", itemName = "tent", currencyType = "cash", sellprice = 10, randomprice = math.random(30, 55), desc = "Sell a Tent", category = "Survival" },
-            -- Food
-                { itemLabel = "Salmon Can", itemName = "consumable_salmon_can", currencyType = "cash", sellprice = 2, randomprice = math.random(30, 55), desc = "Sell a Can of Salmon", category = "Food" },
-                { itemLabel = "Peach", itemName = "consumable_peach", currencyType = "cash", sellprice = .25, randomprice = math.random(30, 55), desc = "Sell a Peach", category = "Food" },
-            -- Drinks
-                { itemLabel = "Water", itemName = "water", currencyType = "cash", sellprice = 1, randomprice = math.random(30, 55), desc = "Sell a Bottle of Water", category = "Drinks" },
-                { itemLabel = "Coffee", itemName = "consumable_coffee", currencyType = "cash", sellprice = 1, randomprice = math.random(30, 55), desc = "Sell a Cup of Coffee", category = "Drinks" },
-            -- Items
-                { itemLabel = "Glass Bottle", itemName = "glassbottle", currencyType = "cash", sellprice = 1, randomprice = math.random(30, 55), desc = "Sell a Glass Bottle", category = "Items" },
-                { itemLabel = "Mail Pigeon", itemName = "pigeon_global", currencyType = "cash", sellprice = 2, randomprice = math.random(30, 55), desc = "Sell a Mail Pigeon", category = "Items" },
-                { itemLabel = "Rolling Paper", itemName = "rollingpaper", currencyType = "cash", sellprice = 1, randomprice = math.random(30, 55), desc = "Sell Rolling Paper", category = "Items" },
-                { itemLabel = "Weapon Cloth", itemName = "cleanshort", currencyType = "cash", sellprice = 1, randomprice = math.random(30, 55), desc = "Sell a Weapon Cloth", category = "Items" },
+_Items_SELL = {
+    -- Survival
+    --{ itemLabel = "Campfire", itemName = "campfire", currencyType = "cash", price = 5, randomprice = math.random(30, 55), desc = "Sell a Campfire", category = "Survival" },
 }
 
 ---------------------------------------------------- SELL ITEMS --------------------------------------------------------------
@@ -89,35 +224,35 @@ Config.SellItems = {
     -----------------------------------------------------------------------------
     --------------------------------------Armadillo------------------------------
     -----------------------------------------------------------------------------
-        ArmadilloGeneralStore = SELL_ITEMS_GENERALSTORE, 
+        ArmadilloGeneralStore = _Items_SELL, 
     -----------------------------------------------------------------------------
     --------------------------------------Blackwater------------------------------
     -----------------------------------------------------------------------------
-        BlackwaterGeneralStore = SELL_ITEMS_GENERALSTORE, 
+        BlackwaterGeneralStore = _Items_SELL, 
     -----------------------------------------------------------------------------
     --------------------------------------Rhodes---------------------------------
     -----------------------------------------------------------------------------
-        RhodesGeneralStore = SELL_ITEMS_GENERALSTORE, 
+        RhodesGeneralStore = _Items_SELL, 
     -----------------------------------------------------------------------------
     --------------------------------------St-Denis-------------------------------
     -----------------------------------------------------------------------------
-        StDenisGeneralStore = SELL_ITEMS_GENERALSTORE, 
+        StDenisGeneralStore = _Items_SELL, 
     -----------------------------------------------------------------------------
     --------------------------------------Strawberry-----------------------------
     -----------------------------------------------------------------------------
-        StrawbGeneralStore = SELL_ITEMS_GENERALSTORE, 
+        StrawbGeneralStore = _Items_SELL, 
     -----------------------------------------------------------------------------
     --------------------------------------Tumbleweed-----------------------------
     -----------------------------------------------------------------------------
-        TumbleGeneralStore = SELL_ITEMS_GENERALSTORE, 
+        TumbleGeneralStore = _Items_SELL, 
     -----------------------------------------------------------------------------
     --------------------------------------Valentine------------------------------
     -----------------------------------------------------------------------------
-        ValGeneralStore = SELL_ITEMS_GENERALSTORE, 
+        ValGeneralStore = _Items_SELL, 
     -----------------------------------------------------------------------------
     --------------------------------------Vanhorn--------------------------------
     -----------------------------------------------------------------------------
-        VanGeneralStore = SELL_ITEMS_GENERALSTORE,         
+        VanGeneralStore = _Items_SELL,         
 }
 
 ----------------------------------------------- STORE ITEMS --------------------------------------------------------------
@@ -128,21 +263,9 @@ Config.SellItems = {
 -- desc = a description of the item
 -- category = where the item will be displayed at
 
-BUY_ITEMS_GENERALSTORE = {
-        -- Survival
-            { itemLabel = "Campfire", itemName = "campfire", currencyType = "cash", buyprice = 15, randomprice = math.random(30, 55), desc = "Buy a Campfire", category = "Survival" },
-            { itemLabel = "Tent", itemName = "tent", currencyType = "cash", buyprice = 20, randomprice = math.random(30, 55), desc = "Buy a Tent", category = "Survival" },
-        -- Food
-            { itemLabel = "Salmon Can", itemName = "consumable_salmon_can", currencyType = "cash", buyprice = 3, randomprice = math.random(30, 55), desc = "Buy a Can of Salmon", category = "Food" },
-            { itemLabel = "Peach", itemName = "consumable_peach", currencyType = "cash", buyprice = 2, randomprice = math.random(30, 55), desc = "Buy a Peach", category = "Food" },
-        -- Drinks
-            { itemLabel = "Water", itemName = "water", currencyType = "cash", buyprice = 2, randomprice = math.random(30, 55), desc = "Buy a Bottle of Water", category = "Drinks" },
-            { itemLabel = "Coffee", itemName = "consumable_coffee", currencyType = "cash", buyprice = 2, randomprice = math.random(30, 55), desc = "Buy a Cup of Coffee", category = "Drinks" },
-        -- Items
-            { itemLabel = "Glass Bottle", itemName = "glassbottle", currencyType = "cash", buyprice = .25, randomprice = math.random(30, 55), desc = "Buy a Glass Bottle", category = "Items" },
-            { itemLabel = "Mail Pigeon", itemName = "pigeon_global", currencyType = "cash", buyprice = 5, randomprice = math.random(30, 55), desc = "Buy a Mail Pigeon", category = "Items" },
-            { itemLabel = "Rolling Paper", itemName = "rollingpaper", currencyType = "cash", buyprice = .5, randomprice = math.random(30, 55), desc = "Buy Rolling Paper", category = "Items" },
-            { itemLabel = "Weapon Cloth", itemName = "cleanshort", currencyType = "cash", buyprice = 2, randomprice = math.random(30, 55), desc = "Buy a Weapon Cloth", category = "Items" },
+_Items_BUY = {
+    -- Survival
+    --    { itemLabel = "Campfire", itemName = "campfire", currencyType = "cash", price = 15, randomprice = math.random(30, 55), desc = "Buy a Campfire", category = "Survival" },
 }
 
 -----------------------------------------------------------------------------
@@ -152,34 +275,34 @@ Config.BuyItems = {
     -----------------------------------------------------------------------------
     --------------------------------------Armadillo- ----------------------------
     -----------------------------------------------------------------------------
-        ArmadilloGeneralStore = BUY_ITEMS_GENERALSTORE, 
+        ArmadilloGeneralStore = _Items_BUY, 
     -----------------------------------------------------------------------------
     --------------------------------------Blackwater------------------------------
     -----------------------------------------------------------------------------
-        BlackwaterGeneralStore = BUY_ITEMS_GENERALSTORE, 
+        BlackwaterGeneralStore = _Items_BUY, 
     -----------------------------------------------------------------------------
     --------------------------------------Rhodes---------------------------------
     -----------------------------------------------------------------------------
-        RhodesGeneralStore = BUY_ITEMS_GENERALSTORE, 
+        RhodesGeneralStore = _Items_BUY, 
     -----------------------------------------------------------------------------
     --------------------------------------St-Denis-------------------------------
     -----------------------------------------------------------------------------
-        StDenisGeneralStore = BUY_ITEMS_GENERALSTORE, 
+        StDenisGeneralStore = _Items_BUY, 
     -----------------------------------------------------------------------------
     --------------------------------------Strawberry-----------------------------
     -----------------------------------------------------------------------------
-        StrawbGeneralStore = BUY_ITEMS_GENERALSTORE, 
+        StrawbGeneralStore = _Items_BUY, 
     -----------------------------------------------------------------------------
     --------------------------------------Tumbleweed-----------------------------
     -----------------------------------------------------------------------------
-        TumbleGeneralStore = BUY_ITEMS_GENERALSTORE, 
+        TumbleGeneralStore = _Items_BUY, 
     -----------------------------------------------------------------------------
     --------------------------------------Valentine------------------------------
     -----------------------------------------------------------------------------
-        ValGeneralStore = BUY_ITEMS_GENERALSTORE, 
+        ValGeneralStore = _Items_BUY, 
     -----------------------------------------------------------------------------
     --------------------------------------Vanhorn--------------------------------
     -----------------------------------------------------------------------------
-        VanGeneralStore = BUY_ITEMS_GENERALSTORE,  
+        VanGeneralStore = _Items_BUY,  
 }
  
